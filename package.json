@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "name": "de.cyberkatze.phonegap.plugin.PdfViewer",
+  "cordova_name": "PdfViewer",
+  "description": "Cordova pdfviewer Plugin",
+  "license": "MIT",
+  "repo": "https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin",
+  "keywords": [
+    "cordova","pdf","pdfviewer","viewer","android","open"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.3.0"
+    }
+  ]
+}
