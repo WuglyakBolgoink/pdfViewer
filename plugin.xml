@@ -3,16 +3,21 @@
             id="de.cyberkatze.phonegap.plugin" version="0.0.1">
         <name>PdfViewer</name>
         <description>Cordova pdfviewer Plugin</description>
-        <license>Free</license>
+        <license>MIT</license>
         <keywords>cordova,pdf,pdfviewer,viewer,android,open</keywords>
         <js-module src="www/openPDF.js" name="openPDF">
             <clobbers target="window.openPDF" />
         </js-module>
         <platform name="android">
-            <config-file target="config.xml" parent="/*">
+            <config-file target="res/xml/config.xml" parent="/*">
                 <feature name="PdfViewer">
                     <param name="android-package" value="de.cyberkatze.phonegap.plugin.PdfViewer"/>
                 </feature>
             </config-file>
+            
+            <config-file target="AndroidManifest.xml" parent="/manifest">
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    </config-file>
+        <source-file src="src/PdfViewer.java" target-dir="src/de/cyberkatze/phonegap/plugin"/>
         </platform>
     </plugin>
