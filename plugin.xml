@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
     <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-            id="de.cyberkatze.phonegap.plugin" version="0.0.1">
+            id="de.cyberkatze.phonegap.plugin" version="0.1.0">
         <name>PdfViewer</name>
         <description>Cordova pdfviewer Plugin</description>
         <license>MIT</license>
-        <keywords>cordova,pdf,pdfviewer,viewer,android,open</keywords>
+        <keywords>cordova,phonegap,pdf,pdfviewer,viewer,android,open</keywords>
+        
         <js-module src="www/openPDF.js" name="openPDF">
             <clobbers target="window.openPDF" />
         </js-module>
+        
         <platform name="android">
             <config-file target="res/xml/config.xml" parent="/*">
                 <feature name="PdfViewer">
@@ -18,6 +20,6 @@
             <config-file target="AndroidManifest.xml" parent="/manifest">
       <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     </config-file>
-        <source-file src="src/PdfViewer.java" target-dir="src/de/cyberkatze/phonegap/plugin"/>
+        <source-file src="src/android/PdfViewer.java" target-dir="src/de/cyberkatze/phonegap/plugin"/>
         </platform>
     </plugin>

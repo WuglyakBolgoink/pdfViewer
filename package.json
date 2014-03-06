@@ -4,7 +4,7 @@
   "cordova_name": "PdfViewer",
   "description": "Cordova pdfviewer Plugin",
   "license": "MIT",
-  "repo": "https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin",
+  "repo": "https://github.com/cyberkatze/pdfViewer",
   "keywords": [
     "cordova","pdf","pdfviewer","viewer","android","open"
   ],
