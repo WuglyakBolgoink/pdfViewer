@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
     <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-            id="de.cyberkatze.phonegap.plugin" version="0.1.1">
+            id="de.cyberkatze.phonegap.plugin" version="0.1.2">
         <name>PdfViewer</name>
-        <description>Cordova pdfviewer Plugin</description>
+        <description>Cordova local PDF-Viewer Plugin</description>
         <license>MIT</license>
         <keywords>cordova,phonegap,pdf,pdfviewer,viewer,android,open</keywords>
         
