@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
     <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-            id="de.cyberkatze.phonegap.plugin" version="0.1.0">
+            id="de.cyberkatze.phonegap.plugin" version="0.1.1">
         <name>PdfViewer</name>
         <description>Cordova pdfviewer Plugin</description>
         <license>MIT</license>
         <keywords>cordova,phonegap,pdf,pdfviewer,viewer,android,open</keywords>
         
-        <js-module src="www/openPDF.js" name="openPDF">
+        <js-module src="www/PdfViewer.js" name="PdfViewer">
             <clobbers target="window.openPDF" />
         </js-module>
         
