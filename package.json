@@ -1,17 +1,17 @@
 {
-  "version": "0.1.4",
-  "name": "de.cyberkatze.phonegap.plugin.PdfViewer",
-  "cordova_name": "PdfViewer",
-  "description": "Cordova pdfviewer Plugin",
-  "license": "MIT",
-  "repo": "https://github.com/cyberkatze/pdfViewer",
-  "keywords": [
-    "cordova","pdf","pdfviewer","viewer","android","open"
-  ],
-  "engines": [
-    {
-      "name": "cordova",
-      "version": ">=3.3.0"
-    }
-  ]
+    "version": "0.2.0",
+    "name": "de.neobaum.phonegap.plugin.PdfViewer",
+    "cordova_name": "PdfViewer",
+    "description": "Cordova pdfviewer Plugin",
+    "license": "MIT",
+    "repo": "https://github.com/cyberkatze/pdfViewer",
+    "keywords": [
+        "cordova", "pdf", "pdfviewer", "viewer", "android", "open"
+    ],
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=3.3.0"
+        }
+    ]
 }

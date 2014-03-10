@@ -1,4 +1,4 @@
-package de.cyberkatze.phonegap.plugin;
+package de.neobaum.phonegap.plugin;
 
 import java.io.File;
 
@@ -19,58 +19,37 @@ public class PdfViewer extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
 
-    	Log.i(TAG, "EXECUTE PdfViewerPlugin");
-    	Log.i(TAG, action);
-
-    	Log.i(TAG, "getExternalStorageDirectory" + Environment.getExternalStorageDirectory().getAbsolutePath());
-
-
         String url = data.getString(0);
 
-
         if (action.equals("openPDF")) {
-        	//openPDF(Environment.getExternalStorageDirectory().getAbsolutePath() + url);
         	openPDF(url);
         }
 
         callbackContext.success();
         return true;
-    }
-
-
+    }//execute
 
     private void openPDF(final String fileName) {
-    	Log.d(TAG, "EXECUTE PdfViewerPlugin openPDF-function");
         cordova.getActivity().runOnUiThread(new Runnable() {
             @Override
             public void run() {
 
+                File file = new File(fileName);
 
-            	 File file = new File(fileName);
-                 Log.i("PdfViewer", "check file exists? = " + file.exists());
-                 if (file.exists()) {
-                     try {
-                          Intent intent = new Intent();
-                          intent.setDataAndType(Uri.fromFile(file), "application/pdf");
-                         cordova.getActivity().startActivity(intent);
+                if (file.exists()) {
 
-                         Log.i("PdfViewerr", "read: " + fileName);
-                         //return true;
-                     } catch (android.content.ActivityNotFoundException e) {
-                         System.out.println("PdfViewer: Error loding url "+fileName+":"+ e.toString());
-                         Log.i("PdfViewer", "error: " + fileName);
-                         //return e.toString();
-                     }
+                    try {
+                        Intent intent = new Intent();
+                        intent.setDataAndType(Uri.fromFile(file), "application/pdf");
+                        cordova.getActivity().startActivity(intent);
+                    } catch (android.content.ActivityNotFoundException e) {
+                        Log.e(TAG, "PdfViewer: Error loding url " + fileName + ":" + e.toString());
+                    }
 
-                 }else{
-                     Log.i("PdfViewer", "notfound: " + fileName);
-                     //return "file not found";
-                 }
-
-
-            }
-        });
-    }
-
-
+                } else {
+                    Log.e(TAG, "File not found: " + fileName);
+                }
+            }//run
+        });//runOnUiThread
+    }//openPDF
 }

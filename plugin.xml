@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="de.cyberkatze.phonegap.plugin" version="0.1.4">
+        id="de.neobaum.phonegap.plugin" version="0.2.0">
     <name>PdfViewer</name>
-    <description>Cordova local PDF-Viewer Plugin</description>
+    <description>Phonegap Android local PDF-Viewer Plugin</description>
     <license>MIT</license>
     <keywords>cordova,phonegap,pdf,pdfviewer,viewer,android,open</keywords>
 
@@ -13,7 +13,7 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="PdfViewer">
-                <param name="android-package" value="de.cyberkatze.phonegap.plugin.PdfViewer"/>
+                <param name="android-package" value="de.neobaum.phonegap.plugin.PdfViewer"/>
             </feature>
         </config-file>
 
@@ -22,6 +22,6 @@
             <uses-permission android:name="android.permission.INTERNET"/>
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
         </config-file>
-        <source-file src="src/android/PdfViewer.java" target-dir="src/de/cyberkatze/phonegap/plugin"/>
+        <source-file src="src/android/PdfViewer.java" target-dir="src/de/neobaum/phonegap/plugin"/>
     </platform>
 </plugin>
