@@ -29,7 +29,8 @@ public class PdfViewer extends CordovaPlugin {
 
 
         if (action.equals("openPDF")) {
-        	openPDF(Environment.getExternalStorageDirectory().getAbsolutePath() + url);
+        	//openPDF(Environment.getExternalStorageDirectory().getAbsolutePath() + url);
+        	openPDF(url);
         }
 
         callbackContext.success();
