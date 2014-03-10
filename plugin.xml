@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-            id="de.cyberkatze.phonegap.plugin" version="0.1.2">
-        <name>PdfViewer</name>
-        <description>Cordova local PDF-Viewer Plugin</description>
-        <license>MIT</license>
-        <keywords>cordova,phonegap,pdf,pdfviewer,viewer,android,open</keywords>
-        
-        <js-module src="www/PdfViewer.js" name="PdfViewer">
-            <clobbers target="window.openPDF" />
-        </js-module>
-        
-        <platform name="android">
-            <config-file target="res/xml/config.xml" parent="/*">
-                <feature name="PdfViewer">
-                    <param name="android-package" value="de.cyberkatze.phonegap.plugin.PdfViewer"/>
-                </feature>
-            </config-file>
-            
-            <config-file target="AndroidManifest.xml" parent="/manifest">
-      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    </config-file>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="de.cyberkatze.phonegap.plugin" version="0.1.3">
+    <name>PdfViewer</name>
+    <description>Cordova local PDF-Viewer Plugin</description>
+    <license>MIT</license>
+    <keywords>cordova,phonegap,pdf,pdfviewer,viewer,android,open</keywords>
+
+    <js-module src="www/PdfViewer.js" name="PdfViewer">
+        <clobbers target="window.openPDF"/>
+    </js-module>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="PdfViewer">
+                <param name="android-package" value="de.cyberkatze.phonegap.plugin.PdfViewer"/>
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+            <uses-permission android:name="android.permission.INTERNET"/>
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+        </config-file>
         <source-file src="src/android/PdfViewer.java" target-dir="src/de/cyberkatze/phonegap/plugin"/>
-        </platform>
-    </plugin>
+    </platform>
+</plugin>
