@@ -1,5 +1,5 @@
 {
-  "version": "0.0.1",
+  "version": "0.1.2",
   "name": "de.cyberkatze.phonegap.plugin.PdfViewer",
   "cordova_name": "PdfViewer",
   "description": "Cordova pdfviewer Plugin",
