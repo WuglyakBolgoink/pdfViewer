@@ -1,4 +1,4 @@
-package de.neobaum.phonegap.plugin;
+package de.cyberkatze.phonegap.plugin;
 
 import java.io.File;
 
