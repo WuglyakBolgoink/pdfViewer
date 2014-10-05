@@ -40,6 +40,8 @@ public class PdfViewer extends CordovaPlugin {
 
                     try {
                         Intent intent = new Intent();
+                        //intent.setPackage("com.adobe.reader");
+                        intent.setAction(android.content.Intent.ACTION_VIEW);
                         intent.setDataAndType(Uri.fromFile(file), "application/pdf");
                         cordova.getActivity().startActivity(intent);
                     } catch (android.content.ActivityNotFoundException e) {
