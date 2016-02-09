@@ -9,6 +9,10 @@
 ## For example:</h3>
 <p><b>window.openPDF("/mnt/sdcard" + myfile);</b></p>
     
+    
+## License
+[MIT][mit_link]
+[mit_link]: https://opensource.org/licenses/mit-license
 
 ## PS:
 I'm so sorry, but i don't have time to check plugin with new version of Android.
