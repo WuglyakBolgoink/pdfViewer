@@ -9,12 +9,6 @@
 ## For example:</h3>
 <p><b>window.openPDF("/mnt/sdcard" + myfile);</b></p>
     
-## License
-
-This software is released under the [Apache 2.0 License][apache2_license].
-
-[apache2_license]: http://opensource.org/licenses/Apache-2.0
-
 
 ## PS:
 I'm so sorry, but i don't have time to check plugin with new version of Android.
